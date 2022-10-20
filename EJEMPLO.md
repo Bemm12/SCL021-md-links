@@ -1,15 +1,19 @@
-# Data Lovers, viaje extendido
+# Data Lovers.
 
-![Travel pic](https://assets-auto.rbl.ms/5fef)
-[Fuente](https://www.theodysseyonline.com/road-trips-worthwh)
+![Red Social](https://github.com/Bemm12/SCL021-social-network45)
+[Github Bea](https://github.com/Bemm12565)
+[Prueba Beatriz](https://github.com/Bemm12/SCL021-social-network45)
 
 ## Resumen
 
-Después de unas semanas trabajando en el proyecto, queremos proponerte una
-_segunda parte_ que se adapte a tu proceso de aprendizaje **individual**.
-Esto permitirá que consolides, profundices y/o complementes lo aprendido.
+Según Forbes, el 90% de la data que existe hoy ha sido creada durante los últimos dos años. Cada día generamos 2.5 millones de terabytes de datos, una cifra sin precedentes.
+
+No obstante, los datos por sí mismos son de poca utilidad. Para que esas grandes cantidades de datos se conviertan en información fácil de leer para los usuarios, necesitamos entender y procesar estos datos. Una manera simple de hacerlo es creando interfaces y visualizaciones.
+
+En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte izquierda se puede construir una interfaz amigable y entendible por el usuario al lado derecho.
 
 Las alternativas son las siguientes:
+
 
 ### 1. Si no terminaste la "Parte Obligatoria" del proyecto
 
@@ -54,11 +58,7 @@ interfaz).
 
 2.5 Cambia el diseño de tu aplicación(Que se vea diferente en escritorio, en tablet y en celular)
 
-## Consideraciones generales
 
-- Esta segunda parte del proyecto es _individual_, salvo alguna excepción que
-  decida tu _Training Manager_.
-  
 
 ## ¿Cómo empezar?
 
@@ -71,7 +71,8 @@ git pull <repo-url> <branch>
 ```
 
 Por ejemplo, si el repo de tu cohort es
-`https://github.com/Laboratoria/CDMX-2018-11-bc-core-am-data-lovers.git`:
+`https://github.com/Laboratoria/SCL021-data-lovers`:
+
 
 ```sh
 git pull upstream  master
