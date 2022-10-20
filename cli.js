@@ -1,2 +1,0 @@
-const fs = require('fs'); // fs es el módulo del sistema de archivos Node.js le permite trabajar con el sistema de archivos en su computadora.
-const path = require('path'); //El path módulo proporciona utilidades para trabajar con rutas de archivos y directorios.
