@@ -15,7 +15,7 @@ let options = {
 
 mdLinks(pathDoc, options).then((arrayLinksMd) => {
 
-  if (process.argv[3] === '--validate' && process.argv[4] === '--stats' || process.argv[4] === '--validate' && process.argv[3] === '--stats') {
+  if ((process.argv[3] === '--validate' && process.argv[4] === '--stats') ||( process.argv[4] === '--validate' && process.argv[3] === '--stats')) {
     options.validate = true;
     options.stats = true;
     let urlArray = [];
@@ -40,10 +40,10 @@ mdLinks(pathDoc, options).then((arrayLinksMd) => {
     let uniqs = new Set(urlArray);
 
     setTimeout(function () {
-      console.log(`|Links de: ${chalk.cyanBright(pathDoc)} |TOTAL  | ${chalk.yellowBright(arrayLinksMd.length)} `);
-      console.log(`|Links de: ${chalk.cyanBright(pathDoc)} |UNICOS | ${chalk.blueBright(uniqs.size)} `);
-      console.log(`|Links de: ${chalk.cyanBright(pathDoc)} |OK     | ${chalk.green(arrayStatusOk)}`);
-      console.log(`|Links de: ${chalk.cyanBright(pathDoc)} |FAIL   | ${chalk.red(arrayStatusFail.length)} `);
+      console.log(chalk.bgYellowBright(`|Links de: ${chalk.cyanBright(pathDoc)} |TOTAL  | ${chalk.yellowBright(arrayLinksMd.length)} `));
+      console.log(chalk.bgBlueBright(`|Links de: ${chalk.cyanBright(pathDoc)} |UNICOS | ${chalk.blueBright(uniqs.size)} `));
+      console.log(chalk.bgGreenBright(`|Links de: ${chalk.cyanBright(pathDoc)} |OK     | ${chalk.green(arrayStatusOk)} `));
+      console.log(chalk.bgRedBright(`|Links de: ${chalk.cyanBright(pathDoc)} |FAIL   | ${chalk.red(arrayStatusFail.length)} `));
 
 
     }, 4000);
@@ -54,10 +54,10 @@ mdLinks(pathDoc, options).then((arrayLinksMd) => {
       fetch(element.href).then(res => {
 
         if (res.status >= 200 && res.status <= 309) {
-          console.log(`|Status:(✔✔ ) ${chalk.greenBright(res.status)} ${chalk.green(res.statusText)}  | File: ${chalk.cyanBright(element.file)} | Text: ${chalk.yellowBright(element.text)} | Link: ${chalk.underline.blueBright(res.url)} `);
+          console.log(`|Status:(✅ ) ${chalk.greenBright(res.status)} ${chalk.green(res.statusText)}  | File: ${chalk.cyanBright(element.file)} | Text: ${chalk.yellowBright(element.text)} | Link: ${chalk.underline.blueBright(res.url)} `);
 
         } else if (res.status >= 400) {
-          console.log(`|Status:(✘ )  ${chalk.redBright(res.status)} ${chalk.red("FAIL")}| File: ${chalk.cyanBright(element.file)} | Text: ${chalk.yellowBright(element.text)} | Link: ${chalk.underline.redBright(res.url)} `);
+          console.log(`|Status:(❌ )  ${chalk.redBright(res.status)} ${chalk.red("FAIL")}| File: ${chalk.cyanBright(element.file)} | Text: ${chalk.yellowBright(element.text)} | Link: ${chalk.underline.redBright(res.url)} `);
 
         }
       }).catch(err => {

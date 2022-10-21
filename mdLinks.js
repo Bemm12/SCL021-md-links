@@ -31,7 +31,7 @@ const mdLinks = (pathDocument) => new Promise((resolve, err) => {
     }
     resolve(arrayLinksMd);
   } else {
-    console.log (chalk.bgRed('La Extensión del archivo ingresado no es: ".md" Por favor verificalo!'));
+    console.log (chalk.red('La Extensión del archivo ingresado no es: ".md" 🚨🚨Por favor verificalo 🚨🚨!'));
   }
 });
 module.exports = mdLinks;
